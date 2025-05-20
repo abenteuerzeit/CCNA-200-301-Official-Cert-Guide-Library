@@ -1,0 +1,4 @@
+# About the Author
+
+
+**Wendell Odom**, CCIE Enterprise No. 1624, was the first Cisco Press author for Cisco certification guides. He wrote all prior editions of this book, along with books on topics ranging from introductory networking to CCENT, CCNA R&S, CCNA DC, CCNP ROUTE, CCNP QoS, and CCIE R&S. In his four decades as a networker, he has worked as a network engineer, consultant, systems engineer, instructor, and course developer. He now spends his time focused on updating the CCNA books, his blog ([www.certskills.com](http://www.certskills.com)), building his new CCNA YouTube channel ([www.youtube.com/@NetworkUpskill](http://www.youtube.com/@NetworkUpskill)), and teaching online ([www.certskills.com/courses](http://www.certskills.com/courses)). You can find him at [www.LinkedIn.com/in/WendellOdom](http://www.LinkedIn.com/in/WendellOdom), Twitter (@WendellOdom), and at his blog, which provides a variety of free CCNA learning resources.

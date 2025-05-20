@@ -1,0 +1,940 @@
+# Glossary
+
+
+### Numeric
+
+**10/100** A short reference to an Ethernet NIC or switch port that supports speed of 10 Mbps and 100 Mbps.
+
+**10/100/1000** A short reference to an Ethernet NIC or switch port that supports speeds of 10 Mbps, 100 Mbps, and 1000 Mbps (that is, 1 Gbps).
+
+**10BASE-T** The 10-Mbps baseband Ethernet specification using two pairs of twisted-pair cabling (Categories 3, 4, or 5): one pair transmits data and the other receives data. 10BASE-T, which is part of the IEEE 802.3 specification, has a distance limit of approximately 100 m (328 feet) per segment.
+
+**100BASE-T** A name for the IEEE Fast Ethernet standard that uses two-pair copper cabling, a speed of 100 Mbps, and a maximum cable length of 100 meters.
+
+**1000BASE-T** A name for the IEEE Gigabit Ethernet standard that uses four-pair copper cabling, a speed of 1000 Mbps (1 Gbps), and a maximum cable length of 100 meters.
+
+**2-way state** In OSPF, a neighbor state that implies that the router has exchanged Hellos with the neighbor and that all required parameters match.
+
+**802.1Q** 802.1Q is the standard protocol for this tag. The most critical piece of information (for this discussion) in this tag is the VLAN ID.
+
+### A
+
+**AAA** Authentication, authorization, and accounting. Authentication confirms the identity of the user or device. Authorization determines what the user or device is allowed to do. Accounting records information about access attempts, including inappropriate requests.
+
+**AAA server** A server that holds security information and provides services related to user login, particularly authentication (is the user who he says he is?), authorization (once authenticated, what do we allow the user to do?), and accounting (tracking the user).
+
+**ABR** *See* [Area Border Router](vol1_gloss.xhtml#gloss_024).
+
+**access interface** A LAN network design term that refers to a switch interface connected to end-user devices, configured so that it does not use VLAN trunking.
+
+**access layer** In a campus LAN design, the switches that connect directly to endpoint devices (servers, user devices), and also connect into the distribution layer switches.
+
+**access link** In Frame Relay, the physical serial link that connects a Frame Relay DTE device, usually a router, to a Frame Relay switch. The access link uses the same physical layer standards as do point-to-point leased lines.
+
+**access point (AP)** A device that provides wireless service for clients within its coverage area or cell, with the AP connecting to both the wireless LAN and the wired Ethernet LAN.
+
+**accounting** In security, the recording of access attempts. *See also* [AAA](vol1_gloss.xhtml#gloss_008).
+
+**address block** A set of consecutive IPv4 addresses. The term is most often used for a classless prefix as defined by CIDR but can also refer to any subnet or IPv4 network.
+
+**adjacent-layer interaction** The general topic of how, on one computer, two adjacent layers in a networking architectural model work together, with the lower layer providing services to the higher layer.
+
+**administrative distance** In Cisco routers, a means for one router to choose between multiple routes to reach the same subnet when those routes were learned by different routing protocols. The lower the administrative distance, the better the source of the routing information.
+
+**all-nodes multicast address** A specific IPv6 multicast address, FF02::1, with link-local scope, used to send packets to all devices on the link that support IPv6.
+
+**all-routers multicast address** A specific IPv6 multicast address, FF02::2, with link-local scope, used to send packets to all devices that act as IPv6 routers on the local link.
+
+**alternate port role** With RSTP, a port role in which the port acts as an alternative to a switch's root port, so that when the switch's root port fails, the alternate port can immediately take over as the root port.
+
+**anycast address** An address shared by two or more hosts that exist in different parts of the network, so that by design, the routers will forward packets to the nearest of the two servers, allowing clients to communicate with the nearest such server, not caring which particular server with which the client communicates.
+
+**APIPA** Automatic Private IP Addressing. A convention per RFC 3927 for a process and reserved set of IPv4 addresses (169.254.0.0/16) that hosts use when they need to use an IPv4 address but they fail to lease an IPv4 address using dynamic processes like DHCP.
+
+**Area Border Router (ABR)** A router using OSPF in which the router has interfaces in multiple OSPF areas.
+
+**ARP** Address Resolution Protocol. An Internet protocol used to map an IP address to a MAC address. Defined in RFC 826.
+
+**ARP table** A list of IP addresses of neighbors on the same VLAN, along with their MAC addresses, as kept in memory by hosts and routers.
+
+**ARPANET** The first packet-switched network, first created around 1970, which served as the predecessor to the Internet.
+
+**ASBR** Autonomous System Border Router. A router using OSPF in which the router learns routes via another source, usually another routing protocol, exchanging routes that are external to OSPF with the OSPF domain.
+
+**authentication** In security, the verification of the identity of a person or a process. *See also* [AAA](vol1_gloss.xhtml#gloss_008).
+
+**authentication server (AS)** An 802.1x entity that authenticates users or clients based on their credentials, as matched against a user database. In a wireless network, a RADIUS server is an AS.
+
+**authenticator** An 802.1x entity that exists as a network device that provides access to the network. In a wireless network, a WLC acts as an authenticator.
+
+**authorization** In security, the determination of the rights allowed for a particular user or device. *See also* [AAA](vol1_gloss.xhtml#gloss_008).
+
+**auto-MDIX** An Ethernet standard feature, introduced at the same time as Gigabit Ethernet in 1998, that senses whether the link uses the correct UTP cable pinout (straight-through or crossover), and automatically swaps the signals internally to make the link work if the wrong UTP cable pinout is used.
+
+**autonegotiation** An IEEE standard mechanism (802.3u) with which two nodes can exchange messages for the purpose of choosing to use the same Ethernet standards on both ends of the link, ensuring that the link functions and functions well.
+
+**autonomous system** An internetwork in the administrative control of one organization, company, or governmental agency, inside which that organization typically runs an interior gateway protocol (IGP).
+
+**auxiliary port** A physical connector on a router that is designed to be used to allow a remote terminal, or PC with a terminal emulator, to access a router using an analog modem.
+
+### B
+
+**backbone area** In OSPFv2 and OSPFv3, the special area in a multiarea design, with all nonbackbone areas needing to connect to the backbone area, area 0.
+
+**back-to-back link** A serial link between two routers, created without CSU/DSUs, by connecting a DTE cable to one router and a DCE cable to the other. Typically used in labs to build serial links without the expense of an actual leased line from the telco.
+
+**backup designated router** An OSPF router connected to a multiaccess network that monitors the work of the designated router (DR) and takes over the work of the DR if the DR fails.
+
+**backup port role** With RSTP, a port role in which the port acts as a backup to one of the switch's ports acting as a designated port. If the switch's designated port fails, the switch will use the backup port to immediately take over as the designated port.
+
+**bandwidth** A reference to the speed of a networking link. Its origins come from earlier communications technology in which the range, or width, of the frequency band dictated how fast communications could occur.
+
+**binary mask** An IPv4 subnet mask written as a 32-bit binary number.
+
+**bitwise Boolean AND** A Boolean AND between two numbers of the same length in which the first bit in each number is ANDed, and then the second bit in each number, and then the third, and so on.
+
+**blocking state** In STP, a port state in which no received frames are processed and the switch forwards no frames out the interface, with the exception of STP messages.
+
+**Boolean AND** A math operation performed on a pair of one-digit binary numbers. The result is another one-digit binary number. 1 AND 1 yields 1; all other combinations yield a 0.
+
+**BPDU** Bridge protocol data unit. The generic name for Spanning Tree Protocol messages.
+
+**BPDU Guard** A Cisco switch feature that listens for incoming STP BPDU messages, disabling the interface if any are received. The goal is to prevent loops when a switch connects to a port expected to only have a host connected to it.
+
+**BPDU Filter** A Cisco switch feature that uses the monitoring and filtering (discarding) of STP BPDUs to achieve goals, such as protecting against forwarding loops on PortFast ports and disabling STP by filtering all BPDU messages.
+
+**bridge ID (BID)** An 8-byte identifier for bridges and switches used by STP and RSTP. It is composed of a 2-byte priority field followed by a 6-byte System ID field that is usually filled with a MAC address.
+
+**bridge protocol data unit** *See* [BPDU](vol1_gloss.xhtml#gloss_046).
+
+**broadcast address** Generally, any address that represents all devices, and can be used to send one message to all devices. In Ethernet, the MAC address of all binary 1s, or FFFF.FFFF.FFFF in hex. For IPv4, *see* [subnet broadcast address](vol1_gloss.xhtml#gloss_384).
+
+**broadcast domain** A set of all devices that receive broadcast frames originating from any device within the set. Devices in the same VLAN are in the same broadcast domain.
+
+**broadcast frame** An Ethernet frame sent to destination address FFFF.FFFF.FFFF, meaning that the frame should be delivered to all hosts on that LAN.
+
+**broadcast network type** An OSPF interface setting, useful on links with more than two routers, resulting in an LSA flooding process managed by an elected designated router (DR).
+
+**broadcast subnet** When subnetting a Class A, B, or C network, the one subnet in each classful network for which all subnet bits have a value of binary 1. The subnet broadcast address in this subnet has the same numeric value as the classful network's networkwide broadcast address.
+
+**broken (state)** An STP port state on Cisco switches, used by Root Guard and Loop Guard as a method for STP to disable the use of the port. A port in the broken state does not forward or process received frames.
+
+### C
+
+**Channel-group** One term Cisco switches use to reference a bundle of links that are, in some respects, treated like a single link. Other similar terms include *EtherChannel* and *PortChannel*.
+
+**CIDR** Classless interdomain routing. An RFC-standard tool for global IP address range assignment. CIDR reduces the size of Internet routers' IP routing tables, helping deal with the rapid growth of the Internet. The term *classless* refers to the fact that the summarized groups of networks represent a group of addresses that do not conform to IPv4 classful (Class A, B, and C) grouping rules.
+
+**CIDR Block** A set of consecutive public IPv4 addresses whose size can be any power of 2. Used as an alternative to the original process with public IP networks of three set sizes.
+
+**CIDR mask** Another term for a prefix mask, one that uses prefix or CIDR notation, in which the mask is represented by a slash (/) followed by a decimal number.
+
+**CIDR notation** *See* [prefix notation](vol1_gloss.xhtml#gloss_315).
+
+**Cisco Catalyst Edge Platform** The brand name created by Cisco for a product family. The products primarily act as routers, but they also create a platform to run many other networking services, including SD-WAN, SASE, and cloud features.
+
+**cladding** In fiber-optic cabling, the second layer of the cable, surrounding the core of the cable, with the property of reflecting light back into the core.
+
+**classful addressing** A concept in IPv4 addressing that defines a subnetted IP address as having three parts: network, subnet, and host.
+
+**classful IP network** An IPv4 Class A, B, or C network; called a classful network because these networks are defined by the class rules for IPv4 addressing.
+
+**classful routing protocol** Does not transmit the mask information along with the subnet number and therefore must consider Class A, B, and C network boundaries and perform autosummarization at those boundaries. Does not support VLSM.
+
+**classless addressing** A concept in IPv4 addressing that defines a subnetted IP address as having two parts: a prefix (or subnet) and a host.
+
+**classless interdomain routing** The name of an RFC that defines several important features related to public IPv4 addressing: a global address assignment strategy to keep the size of IPv4 routing tables smaller, and the ability to assign public IPv4 addresses in sizes based on any prefix length.
+
+**classless prefix** A range of public IPv4 addresses as defined by CIDR.
+
+**classless prefix length** The mask (prefix length) used when defining a classless prefix.
+
+**classless routing protocol** An inherent characteristic of a routing protocol, specifically that the routing protocol does send subnet masks in its routing updates, thereby removing any need to make assumptions about the addresses in a particular subnet or network, making it able to support VLSM and manual route summarization.
+
+**CLI** Command-line interface. An interface that enables the user to interact with the operating system by entering commands and optional arguments.
+
+**collision domain** A set of network interface cards (NIC) for which a frame sent by one NIC could result in a collision with a frame sent by any other NIC in the same collision domain.
+
+**command-line interface** *See* [CLI](vol1_gloss.xhtml#gloss_072).
+
+**configuration mode** A part of the Cisco IOS Software CLI in which the user can type configuration commands that are then added to the device's currently used configuration file (running-config).
+
+**connected** The single-item status code listed by a *switch show interfaces status* command, with this status referring to a working interface.
+
+**connected route** On a router, an IP route added to the routing table when the router interface is both up and has an IP address configured. The route is for the subnet that can be calculated based on the configured IP address and mask.
+
+**console port** A physical socket on a router or switch to which a cable can be connected between a computer and the router/switch, for the purpose of allowing the computer to use a terminal emulator and use the CLI to configure, verify, and troubleshoot the router/switch.
+
+**contiguous network** A network topology in which subnets of network X are not separated by subnets of any other classful network.
+
+**convergence** The time required for routing protocols to react to changes in the network, removing bad routes and adding new, better routes so that the current best routes are in all the routers' routing tables.
+
+**core** In fiber-optic cabling, the center cylinder of the cable, made of fiberglass, through which light passes.
+
+**crossover cable** An Ethernet cable that swaps the pair used for transmission on one device to a pair used for receiving on the device on the opposite end of the cable. In 10BASE-T and 100BASE-TX networks, this cable swaps the pair at pins 1,2 to pins 3,6 on the other end of the cable, and the pair at pins 3,6 to pins 1,2 as well.
+
+**CSMA/CD** Carrier sense multiple access with collision detection. A media-access mechanism in which devices ready to transmit data first check the channel for a carrier. If no carrier is sensed for a specific period of time, a device can transmit. If two devices transmit at once, a collision occurs and is detected by all colliding devices. This collision subsequently delays retransmissions from those devices for some random length of time.
+
+### D
+
+**data VLAN** A VLAN used by typical data devices connected to an Ethernet, like PCs and servers. Used in comparison to a voice VLAN.
+
+**Database Description** An OSPF packet type that lists brief descriptions of the LSAs in the OSPF LSDB.
+
+**DDN** *See* [dotted-decimal notation](vol1_gloss.xhtml#gloss_113).
+
+**Dead Interval** In OSPF, a timer used for each neighbor. A router considers the neighbor to have failed if no Hellos are received from that neighbor in the time defined by the timer.
+
+**decimal mask** An IPv4 subnet mask written in dotted-decimal notation; for example, 255.255.255.0.
+
+**de-encapsulation** On a computer that receives data over a network, the process in which the device interprets the lower-layer headers and, when finished with each header, removes the header, revealing the next-higher-layer PDU.
+
+**default gateway/default router** On an IP host, the IP address of some router to which the host sends packets when the packet's destination address is on a subnet other than the local subnet.
+
+**default mask** The mask used in a Class A, B, or C network that does not create any subnets; specifically, mask 255.0.0.0 for Class A networks, 255.255.0.0 for Class B networks, and 255.255.255.0 for Class C networks.
+
+**default route** On a router, the route that is considered to match all packets that are not otherwise matched by some more specific route.
+
+**default VLAN** A reference to the default setting of 1 (meaning VLAN ID 1) on the *switchport access vlan vlan-id interface* subcommand on Cisco switches, meaning that by default, a port will be assigned to VLAN 1 if acting as an access port.
+
+**designated port** In both STP and RSTP, a port role used to determine which of multiple interfaces on multiple switches, each connected to the same segment or collision domain, should forward frames to the segment. The switch advertising the lowest-cost Hello BPDU onto the segment becomes the DP.
+
+**designated router** In OSPF, on a multiaccess network, the router that wins an election and is therefore responsible for managing a streamlined process for exchanging OSPF topology information between all routers attached to that network.
+
+**DHCP** Dynamic Host Configuration Protocol. A protocol used by hosts to dynamically discover and lease an IP address, and learn the correct subnet mask, default gateway, and DNS server IP addresses.
+
+**DHCP client** Any device that uses DHCP protocols to ask to lease an IP address from a DHCP server, or to learn any IP settings from that server.
+
+**DHCP relay agent** The name of the router IOS feature that forwards DHCP messages from client to servers by changing the destination IP address from 255.255.255.255 to the IP address of the DHCP server.
+
+**DHCP server** Software that waits for DHCP clients to request to lease IP addresses, with the server assigning a lease of an IP address as well as listing other important IP settings for the client.
+
+**Dijkstra Shortest Path First (SPF) algorithm** The name of the algorithm used by link-state routing protocols to analyze the LSDB and find the least-cost routes from that router to each subnet.
+
+**directed broadcast address** *See* [subnet broadcast address](vol1_gloss.xhtml#gloss_384).
+
+**disabled port role** In STP, a port role for nonworking interfaces—in other words, interfaces that are not in a connect or up/up interface state. The reason can be due to administrative setting (shutdown) or interface failure.
+
+**disabled state** In STP but not RSTP, the state to be used for interfaces in the disabled port role.
+
+**discarding state** An RSTP interface state, which primarily replaces the STP blocking state, as used for interfaces with port roles other than designated or root ports. In this state, the switch does not forward data frames out the interface, nor does it process received frames other than RSTP messages.
+
+**discontiguous network** A network topology in which subnets of network X are separated by subnets of some other classful network.
+
+**distance vector** The logic behind the behavior of some interior routing protocols, such as RIP. Distance vector routing algorithms call for each router to send its entire routing table in each update, but only to its neighbors. Distance vector routing algorithms can be prone to routing loops but are computationally simpler than link-state routing algorithms.
+
+**distribution layer** In a campus LAN design, the switches that connect to access layer switches as the most efficient means to provide connectivity from the access layer into the other parts of the LAN.
+
+**DNS** Domain Name System. An application layer protocol used throughout the Internet for translating hostnames into their associated IP addresses.
+
+**DNS Reply** In the Domain Name System (DNS), a message sent by a DNS server to a DNS client in response to a DNS Request, identifying the IP address assigned to a particular hostname or fully qualified domain name (FQDN).
+
+**DNS Request** In the Domain Name System (DNS), a message sent by a DNS client to a DNS server, listing a hostname or fully qualified domain name (FQDN), asking the server to discover and reply with the IP address associated with that hostname or FQDN.
+
+**DNS server** An application acting as a server for the purpose of providing name resolution services per the Domain Name System (DNS) protocol and worldwide system.
+
+**DNS server list** A list of IP addresses of DNS servers, known to an IP host, used by a host when sending DNS name resolution requests.
+
+**dotted-decimal notation (DDN)** The format used for IP version 4 addresses, in which four decimal values are used, separated by periods (dots).
+
+**dual stack** A mode of operation in which a host or router runs both IPv4 and IPv6.
+
+**duplex mismatch** On opposite ends of any Ethernet link, the condition in which one of the two devices uses full-duplex logic and the other uses half-duplex logic, resulting in unnecessary frame discards and retransmissions on the link.
+
+**duplicate address detection (DAD)** A term used in IPv6 to refer to how hosts first check whether another host is using a unicast address before the first host uses that address.
+
+### E
+
+**EIGRP** Enhanced Interior Gateway Routing Protocol. An advanced version of IGRP developed by Cisco. Provides superior convergence properties and operating efficiency and combines the advantages of link-state protocols with those of distance vector protocols.
+
+**EIGRP version 6** The version of the EIGRP routing protocol that supports IPv6, and not IPv4.
+
+**electromagnetic interference (EMI)** The name of the effect in which electricity passes through one cable as normal, inducing a magnetic field outside the conductor. That magnetic field, if it passes through another conductor, like a nearby cable, induces new electrical current in the second cable, interfering with the use of electricity to transmit data on the second cable.
+
+**enable mode** A part of the Cisco IOS CLI in which the user can use the most powerful and potentially disruptive commands on a router or switch, including the ability to then reach configuration mode and reconfigure the router.
+
+**encapsulation** The placement of data from a higher-layer protocol behind the header (and in some cases, between a header and trailer) of the next-lower-layer protocol. For example, an IP packet could be encapsulated in an Ethernet header and trailer before being sent over an Ethernet.
+
+**encryption** Applying a specific algorithm to data to alter the appearance of the data, making it incomprehensible to those who are not authorized to see the information.
+
+**enterprise router** A term to describe the general role of a router as a router at a permanent site owned or leased by the enterprise, like an office building, manufacturing facility, branch office, or retail location. These sites typically have enough users to justify separate routers, switches, and wireless access points, and are more likely to justify private WAN services, in comparison to SOHO routers.
+
+**equal-cost multipath (ECMP)** A term for a router's forwarding logic when it has more than one route for the same subnet with the same metric (cost).
+
+**equal-cost route** When a routing protocol computes all possible routes to one subnet, the case for which multiple of those routes have the same metric (cost).
+
+**error detection** The process of discovering whether a data-link level frame was changed during transmission. This process typically uses a Frame Check Sequence (FCS) field in the data-link trailer.
+
+**error disabled** An interface state on LAN switches that can be the result of one of many security violations.
+
+**error recovery** The process of noticing when some transmitted data was not successfully received and resending the data until it is successfully received.
+
+**EtherChannel** A feature in which up to eight parallel Ethernet segments exist between the same two devices, each using the same speed. May be a Layer 2 EtherChannel, which acts like a single link for forwarding and Spanning Tree Protocol logic, or a Layer 3 EtherChannel, which acts like a single link for the switch's Layer 3 routing logic.
+
+**EtherChannel Load Distribution** The logic used by switches when forwarding messages over EtherChannels by which the switch chooses the specific physical link out which the switch will forward the frame.
+
+**Ethernet** A series of LAN standards defined by the IEEE, originally invented by Xerox Corporation and developed jointly by Xerox, Intel, and Digital Equipment Corporation.
+
+**Ethernet address** A 48-bit (6-byte) binary number, usually written as a 12-digit hexadecimal number, used to identify Ethernet nodes in an Ethernet network. Ethernet frame headers list a destination and source address field, used by the Ethernet devices to deliver Ethernet frames to the correct destination.
+
+**Ethernet frame** A term referring to an Ethernet data-link header and trailer, plus the data encapsulated between the header and trailer.
+
+**Ethernet Line Service (E-Line)** A specific carrier/metro Ethernet service defined by MEF (MEF.net) that provides a point-to-point topology between two customer devices, much as if the two devices were connected using an Ethernet crossover cable.
+
+**Ethernet link** A generic term for any physical link between two Ethernet nodes, no matter what type of cabling is used.
+
+**Ethernet over MPLS (EoMPLS)** A term referring specifically to how a service provider can create an Ethernet WAN service using an MPLS network. More generally, a term referring to Ethernet WAN services.
+
+**Ethernet port** A generic term for the opening on the side of any Ethernet node, typically in an Ethernet NIC or LAN switch, into which an Ethernet cable can be connected.
+
+**EtherType** Jargon that shortens the term *Ethernet Type*, which refers to the Type field in the Ethernet header. The Type field identifies the type of packet encapsulated inside an Ethernet frame.
+
+**EUI-64** Literally, a standard for an extended unique identifier that is 64 bits long. Specifically for IPv6, a set of rules for forming a 64-bit identifier, used as the interface ID in IPv6 addresses, by starting with a 48-bit MAC address, inserting FFFE (hex) in the middle, and inverting the seventh bit.
+
+**extended ping** An IOS command in which the *ping* command accepts many other options besides just the destination IP address.
+
+### F
+
+**Fast Ethernet** The common name for all the IEEE standards that send data at 100 megabits per second.
+
+**fiber-optic cable** A type of cabling that uses glass fiber as a medium through which to transmit light.
+
+**filter** Generally, a process or a device that screens network traffic for certain characteristics, such as source address, destination address, or protocol, and determines whether to forward or discard that traffic based on the established criteria.
+
+**firewall** A device that forwards packets between the less secure and more secure parts of the network, applying rules that determine which packets are allowed to pass and which are not.
+
+**flash memory** A type of read/write permanent memory that retains its contents even with no power applied to the memory, and uses no moving parts, making the memory less likely to fail over time.
+
+**floating static route** A static IP route that uses a higher administrative distance than other routes, typically routes learned by a routing protocol. As a result, the router will not use the static route if the routing protocol route has been learned, but then use the static route if the routing protocol fails to learn the route.
+
+**flood/flooding** The result of the LAN switch forwarding process for broadcasts and unknown unicast frames. Switches forward these frames out all interfaces, except the interface in which the frame arrived. Switches also flood multicasts by default, although this behavior can be changed.
+
+**forward** To send a frame received in one interface out another interface, toward its ultimate destination.
+
+**forward delay** An STP timer, defaulting to 15 seconds, used to dictate how long an interface stays in the listening state and the time spent in learning state. Also called the forward delay timer.
+
+**forward route** From one host's perspective, the route over which a packet travels from that host to some other host.
+
+**forwarding state** An STP and RSTP port state in which an interface operates unrestricted by STP.
+
+**frame** A term referring to a data-link header and trailer, plus the data encapsulated between the header and trailer.
+
+**Frame Check Sequence** A field in many data-link trailers used as part of the error-detection process.
+
+**full duplex** Generically, any communication in which two communicating devices can concurrently send and receive data. In Ethernet LANs, the allowance for both devices to send and receive at the same time, allowed when both devices disable their CSMA/CD logic.
+
+**full state** In OSPF, a neighbor state that implies that the two routers have exchanged the complete (full) contents of their respective LSDBs.
+
+**full update** With IP routing protocols, the general concept that a routing protocol update lists all known routes.
+
+**fully adjacent** In OSPF, a characterization of the state of a neighbor in which the two neighbors have reached the full state.
+
+**fully adjacent neighbor** In OSPF, a neighbor with which the local router has also reached the OSPF full state, meaning that the two routers have exchanged their LSDBs directly with each other.
+
+### G
+
+**Gigabit Ethernet** The common name for all the IEEE standards that send data at 1 gigabit per second.
+
+**global routing prefix** An IPv6 prefix that defines an IPv6 address block made up of global unicast addresses, assigned to one organization, so that the organization has a block of globally unique IPv6 addresses to use in its network.
+
+**global unicast address** A type of unicast IPv6 address that has been allocated from a range of public globally unique IP addresses, as registered through IANA/ICANN, its member agencies, and other registries or ISPs.
+
+### H
+
+**half duplex** Generically, any communication in which only one device at a time can send data. In Ethernet LANs, the normal result of the CSMA/CD algorithm that enforces the rule that only one device should send at any point in time.
+
+**HDLC** High-Level Data Link Control. A bit-oriented synchronous data-link layer protocol developed by the International Organization for Standardization (ISO).
+
+**header** In computer networking, a set of bytes placed in front of some other data, encapsulating that data, as defined by a particular protocol.
+
+**Hello (Multiple definitions)** 1) A protocol used by OSPF routers to discover, establish, and maintain neighbor relationships. 2) A protocol used by EIGRP routers to discover, establish, and maintain neighbor relationships. 3) In STP, refers to the name of the periodic message sourced by the root bridge in a spanning tree.
+
+**Hello BPDU** The STP and RSTP message used for the majority of STP communications, listing the root's bridge ID, the sending device's bridge ID, and the sending device's cost with which to reach the root.
+
+**Hello Interval** With OSPF and EIGRP, an interface timer that dictates how often the router should send Hello messages.
+
+**Hello timer** In STP, the time interval at which the root switch should send Hello BPDUs.
+
+**history buffer** In a Cisco router or switch, the function by which IOS keeps a list of commands that the user has used in this login session, both in EXEC mode and configuration mode. The user can then recall these commands for easier repeating or making small edits and issuing similar commands.
+
+**hop count** The metric used by the RIP routing protocol. Each router in an IP route is considered a hop, so for example, if two other routers sit between a router and some subnet, that router would have a hop count of two for that route.
+
+**host** Any device that uses an IP address.
+
+**host address** The IP address assigned to a network card on a computer.
+
+**host part** A term used to describe a part of an IPv4 address that is used to uniquely identify a host inside a subnet. The host part is identified by the bits of value 0 in the subnet mask.
+
+**host route** A route with a /32 mask, which by virtue of this mask represents a route to a single host IP address.
+
+**hostname** The alphanumeric name of an IP host.
+
+**hub** A LAN device that provides a centralized connection point for LAN cabling, repeating any received electrical signal out all other ports, thereby creating a logical bus. Hubs do not interpret the electrical signals as a frame of bits, so hubs are considered to be Layer 1 devices.
+
+### I
+
+**IANA** The Internet Assigned Numbers Authority (IANA). An organization that owns the rights to assign many operating numbers and facts about how the global Internet works, including public IPv4 and IPv6 addresses. *See also* [ICANN](vol1_gloss.xhtml#gloss_178).
+
+**ICANN** The Internet Corporation for Assigned Names and Numbers. An organization appointed by IANA to oversee the distributed process of assigning public IPv4 and IPv6 addresses across the globe.
+
+**ICMP** Internet Control Message Protocol. A TCP/IP network layer protocol that reports errors and provides other information relevant to IP packet processing.
+
+**ICMP echo reply** One type of ICMP message, created specifically to be used as the message sent by the ping command to test connectivity in a network. The ping command expects to receive these messages from other hosts, after the ping command first sends an ICMP echo request message to the host.
+
+**ICMP echo request** One type of ICMP message, created specifically to be used as the message sent by the ping command to test connectivity in a network. The ping command sends these messages to other hosts, expecting the other host to reply with an ICMP echo reply message.
+
+**IEEE** Institute of Electrical and Electronics Engineers. A professional organization that develops communications and network standards, among other activities.
+
+**IEEE 802.11** The IEEE base standard for wireless LANs.
+
+**IEEE 802.1Q** The IEEE standard VLAN trunking protocol. 802.1Q includes the concept of a native VLAN, for which no VLAN header is added, and a 4-byte VLAN header is inserted after the original frame's Type/Length field.
+
+**IEEE 802.2** An IEEE LAN protocol that specifies an implementation of the LLC sublayer of the data-link layer.
+
+**IEEE 802.3** A set of IEEE LAN protocols that specifies the many variations of what is known today as an Ethernet LAN.
+
+**IEEE 802.3 AD** The IEEE standard for the functional equivalent of the Cisco-proprietary EtherChannel.
+
+**IETF** The Internet Engineering Task Force. The IETF serves as the primary organization that works directly to create new TCP/IP standards.
+
+**IGP** *See* [interior gateway protocol](vol1_gloss.xhtml#gloss_196).
+
+**inactivity timer** For switch MAC address tables, a timer associated with each entry that counts time upward from 0 and is reset to 0 each time a switch receives a frame with the same MAC address. The entries with the largest timers can be removed to make space for additional MAC address table entries.
+
+**infrastructure mode** The operating mode of an AP that is providing a BSS for wireless clients.
+
+**Integrated Services Router (ISR)** Cisco's long-running term for several different model series of Enterprise-class routers, intended mostly for use as enterprise routers and some use as SOHO routers. ISR routers first serve as routers but, depending on the family or specific model, support all current types of WAN connections (private and Internet), LAN switching ports, Wireless APs, VPNs, and other integrated functions supported in a single device.
+
+**interface bandwidth** In OSPF, the numerator in the calculation of an interface's default OSPF cost metric, calculated as the interface bandwidth divided by the reference bandwidth.
+
+**Interface ID** The ending (rightmost) portion of the structure of an IPv6 address, usually 64 bits long.
+
+**interface-local scope** A concept in IPv6 for which packets sent to an address using this scope should not physically exit the interface, keeping the packet inside the sending host.
+
+**interior gateway protocol (IGP)** A routing protocol designed to be used to exchange routing information inside a single autonomous system.
+
+**interior routing protocol** A synonym of interior gateway protocol. *See* [interior gateway protocol](vol1_gloss.xhtml#gloss_196).
+
+**Internal Border Gateway Protocol (iBGP)** The use of BGP between two routers in the same ASN, with different rules compared to External BGP (eBGP).
+
+**internal router** In OSPF, a router with all interfaces in the same nonbackbone area.
+
+**Internetwork Operating System** The operating system (OS) of Cisco routers and switches, which provides the majority of a router's or switch's features, with the hardware providing the remaining features.
+
+**IOS** *See* [Internetwork Operating System](vol1_gloss.xhtml#gloss_200).
+
+**IOS XE** A Cisco operating system (OS) with a modern Linux-based multitasking software architecture used as the OS for many enterprise-class LAN switch and router products.
+
+**IP** Internet Protocol. The network layer protocol in the TCP/IP stack, providing routing and logical addressing standards and services.
+
+**IP address (IP version 4)** In IP version 4 (IPv4), a 32-bit address assigned to hosts using TCP/IP. Each address consists of a network number, an optional subnetwork number, and a host number. The network and subnetwork numbers together are used for routing, and the host number is used to address an individual host within the network or subnetwork.
+
+**IP address (IP version 6)** In IP version 6 (IPv6), a 128-bit address assigned to hosts using TCP/IP. Addresses use different formats, commonly using a routing prefix, subnet, and interface ID, corresponding to the IPv4 network, subnet, and host parts of an address.
+
+**IP network** *See* [classful IP network](vol1_gloss.xhtml#gloss_065).
+
+**IP packet** An IP header, followed by the data encapsulated after the IP header, but specifically not including any headers and trailers for layers below the network layer.
+
+**IP routing table** *See* [routing table](vol1_gloss.xhtml#gloss_354).
+
+**IP subnet** Subdivisions of a Class A, B, or C network, as configured by a network administrator. Subnets allow a single Class A, B, or C network to be used instead of multiple networks, and still allow for a large number of groups of IP addresses, as is required for efficient IP routing.
+
+**IP version 4** Literally, the version of the Internet Protocol defined in an old RFC 791, standardized in 1980, and used as the basis of TCP/IP networks and the Internet for over 30 years.
+
+**IP version 6** A newer version of the Internet Protocol defined in RFC 2460, as well as many other RFCs, whose creation was motivated by the need to avoid the IPv4 address exhaustion problem.
+
+**IPv4** *See* [IP version 4](vol1_gloss.xhtml#gloss_210).
+
+**IPv4 address exhaustion** The process by which the public IPv4 addresses, available to create the Internet, were consumed through the 1980s until today, with the expectation that eventually the world would run out of available IPv4 addresses.
+
+**IPv6** *See* [IP version 6](vol1_gloss.xhtml#gloss_211).
+
+**IPv6 address scope** The concept of how far an IPv6 packet should be forwarded by hosts and routers in an IPv6 network. Includes interface-local, link-local, site-local, and organization-local scopes.
+
+**IPv6 administrative distance** In Cisco routers, a means for one router to choose between multiple IPv6 routes to reach the same subnet when those routes were learned by different routing protocols. The lower the administrative distance, the better the source of the routing information.
+
+**IPv6 host route** A route with a /128 mask, which by virtue of this mask represents a route to a single host IPv6 address.
+
+**IPv6 local route** A route added to an IPv6 router's routing table for the router's interface IP address, with a /128 mask, which by virtue of this mask represents a route to only that router's IPv4 address.
+
+**IPv6 neighbor table** The IPv6 equivalent of the ARP table. A table that lists IPv6 addresses of other hosts on the same link, along with their matching MAC addresses, as typically learned using Neighbor Discovery Protocol (NDP).
+
+**ISO** International Organization for Standardization. An international organization that is responsible for a wide range of standards, including many standards relevant to networking. The ISO developed the OSI reference model, a popular networking reference model.
+
+### K–L
+
+**keepalive** A proprietary feature of Cisco routers in which the router sends messages on a periodic basis as a means of letting the neighboring router know that the first router is still alive and well.
+
+**known unicast frame** An Ethernet frame whose destination MAC address is listed in a switch's MAC address table, so the switch will forward the frame out the one port associated with that entry in the MAC address table.
+
+**LACP** Link Aggregation Control Protocol is a messaging protocol defined by the IEEE 802.3ad standard that enables two neighboring devices to realize that they have multiple parallel links connecting to each other and then to decide which links can be combined into an EtherChannel.
+
+**Layer 2 EtherChannel (L2 EtherChannel)** An EtherChannel that acts as a switched port (that is, not a routed port), and as such, is used by a switch's Layer 2 forwarding logic. As a result, the Layer 2 switch lists the Layer 2 EtherChannel in switch MAC address tables, and when forwarding a frame based on one of these MAC table entries, the switch balances traffic across the various ports in the Layer 2 EtherChannel.
+
+**Layer 3 EtherChannel (L3 EtherChannel)** An EtherChannel that acts as a routed port (that is, not a switched port), and as such, is used by a switch's Layer 3 forwarding logic. As a result, the Layer 3 switch lists the Layer 3 EtherChannel in various routes in the switch's IP routing table, with the switch balancing traffic across the various ports in the Layer 3 EtherChannel.
+
+**Layer 3 protocol** A protocol that has characteristics like OSI Layer 3, which defines logical addressing and routing. IPv4 and IPv6 are Layer 3 protocols.
+
+**Layer 3 switch** *See* [multilayer switch](vol1_gloss.xhtml#gloss_261).
+
+**learning** The process used by switches for discovering MAC addresses, and their relative location, by looking at the source MAC address of all frames received by a bridge or switch.
+
+**learning state** In STP, a temporary port state in which the interface does not forward frames, but it can begin to learn MAC addresses from frames received on the interface.
+
+**leased line** A serial communications circuit between two points, provided by some service provider, typically a telephone company (telco). Because the telco does not sell a physical cable between the two endpoints, instead charging a monthly fee for the ability to send bits between the two sites, the service is considered to be a leased service.
+
+**link state** A classification of the underlying algorithm used in some routing protocols. Link-state protocols build a detailed database that lists links (subnets) and their state (up, down), from which the best routes can then be calculated.
+
+**link-local address (LLA)** A unicast IPv6 address that begins FE80, used on each IPv6-enabled interface, used for sending packets within the attached link by applying a link-local scope.
+
+**link-local multicast address** A multicast IPv6 address that begins with FF02, with the fourth digit of 2 identifying the scope as link-local, to which devices apply a link-local scope.
+
+**link-local scope** With IPv6 multicasts, a term that refers to the parts (scope) of the network to which a multicast packet can flow, with link-local referring to the fact that the packet stays on the subnet in which it originated.
+
+**link-state advertisement (LSA)** In OSPF, the name of the data structure that resides inside the LSDB and describes in detail the various components in a network, including routers and links (subnets).
+
+**link-state database (LSDB)** In OSPF, the data structure in RAM of a router that holds the various LSAs, with the collective LSAs representing the entire topology of the network.
+
+**Link-State Request** An OSPF packet used to ask a neighboring router to send a particular LSA.
+
+**Link-State Update** An OSPF packet used to send an LSA to a neighboring router.
+
+**listening state** A temporary STP port state that occurs immediately when a blocking interface must be moved to a forwarding state. The switch times out MAC table entries during this state. It also ignores frames received on the interface and doesn't forward any frames out the interface.
+
+**LLC** Logical Link Control. The higher of the two sublayers of the data-link layer defined by the IEEE. Synonymous with IEEE 802.2.
+
+**local broadcast IP address** IPv4 address 255.255.255.255. A packet sent to this address is sent as a data-link broadcast, but only flows to hosts in the subnet into which it was originally sent. Routers do not forward these packets.
+
+**local mode** The default mode of a Cisco lightweight AP that offers one or more functioning BSSs on a specific channel.
+
+**local route** A route added to an IPv4 router's routing table for the router's interface IP address, with a /32 mask, which by virtue of this mask represents a route to only that router's IPv4 address.
+
+**local username** A username (with matching password), configured on a router or switch. It is considered local because it exists on the router or switch, and not on a remote server.
+
+**logical address** A generic reference to addresses as defined by Layer 3 protocols that do not have to be concerned with the physical details of the underlying physical media. Used mainly to contrast these addresses with data-link addresses, which are generically considered to be physical addresses because they differ based on the type of physical medium.
+
+**longest prefix match** When a router's IP routing table has more than one route that matches a packet's destination address, the choice to use the matching route with the longest mask (the mask with the largest number of binary 1s in the mask).
+
+**Loop Guard** A complex Cisco switch mechanism that protects against STP loops in a specific common case. For switches whose switch-to-switch links settle into either a root port or an alternate port role, as expected per the STP design, Loop Guard disables use of those ports if normal STP operation attempts to assign them the designated port role.
+
+**LSA** *See* [link-state advertisement](vol1_gloss.xhtml#gloss_235).
+
+**LSDB** *See* [link-state database](vol1_gloss.xhtml#gloss_236).
+
+### M
+
+**MAC** Media Access Control. The lower of the two sublayers of the data-link layer defined by the IEEE. Synonymous with IEEE 802.3 for Ethernet LANs.
+
+**MAC address** A standardized data-link layer address that is required for every device that connects to a LAN. Ethernet MAC addresses are 6 bytes long and are controlled by the IEEE. Also known as a hardware address, a MAC layer address, and a physical address.
+
+**MAC address table** A table of forwarding information held by a Layer 2 switch, built dynamically by listening to incoming frames and used by the switch to match frames to make decisions about where to forward the frame.
+
+**MaxAge** In STP, a timer that states how long a switch should wait when it no longer receives Hellos from the root switch before acting to reconverge the STP topology. Also called the MaxAge timer.
+
+**media access control (MAC) layer** A low-level function performed as part of Layer 2; in wireless networks, this function can be divided between a wireless LAN controller and a lightweight AP to form a split-MAC architecture.
+
+**message of the day** One type of login banner that can be defined on a Cisco router or switch.
+
+**metric** A unit of measure used by routing protocol algorithms to determine the best route for traffic to use to reach a particular destination.
+
+**Modified EUI-64** *See* [EUI-64](vol1_gloss.xhtml#gloss_139).
+
+**multiarea** In OSPFv2 and OSPFv3, a design that uses multiple areas.
+
+**multiarea OSPF** In OSPFv2 and OSPFv3, a design that uses more than one area within one OSPF domain (typically a single company).
+
+**multicast IP address** A class D IPv4 address. When used as a destination address in a packet, the routers collectively work to deliver copies of the one original packet to all hosts who have previously registered to receive packets sent to that particular multicast address.
+
+**multilayer switch** A LAN switch that can also perform Layer 3 routing functions. The name comes from the fact that this device makes forwarding decisions based on logic from multiple OSI layers (Layers 2 and 3).
+
+**multimode fiber** A type of fiber cable that works well with transmitters like LEDs that emit multiple angles of light into the core of the cable; to accommodate the multiple angles of incident, the cable has a larger core in comparison to single-mode fiber cables.
+
+### N
+
+**name resolution** The process by which an IP host discovers the IP address associated with a hostname, often involving sending a DNS request to a DNS server, with the server supplying the IP address used by a host with the listed hostname.
+
+**name server** A server connected to a network that resolves network names into network addresses.
+
+**NAT** Network Address Translation. A mechanism for reducing the need for globally unique IP addresses. NAT allows an organization with addresses that are not globally unique to connect to the Internet, by translating those addresses into public addresses in the globally routable address space.
+
+**native VLAN** The one VLAN ID on any 802.1Q VLAN trunk for which the trunk forwards frames without an 802.1Q header.
+
+**neighbor** In routing protocols, another router with which a router decides to exchange routing information.
+
+**Neighbor Advertisement (NA)** A message defined by the IPv6 Neighbor Discovery Protocol (NDP), used to declare to other neighbors a host's MAC address. Sometimes sent in response to a previously received NDP Neighbor Solicitation (NS) message.
+
+**Neighbor Discovery Protocol (NDP)** A protocol that is part of the IPv6 protocol suite, used to discover and exchange information about devices on the same subnet (neighbors). In particular, it replaces the IPv4 ARP protocol.
+
+**Neighbor Solicitation (NS)** A message defined by the IPv6 Neighbor Discovery Protocol (NDP), used to ask a neighbor to reply with a Neighbor Advertisement, which lists the neighbor's MAC address.
+
+**neighbor table** For OSPF and EIGRP, a list of routers that have reached neighbor status.
+
+**network** A collection of computers, printers, routers, switches, and other devices that can communicate with each other over some transmission medium.
+
+**network address** *See* [network number](vol1_gloss.xhtml#gloss_278).
+
+**network broadcast address** In IPv4, a special address in each classful network that can be used to broadcast a packet to all hosts in that same classful network. Numerically, the address has the same value as the network number in the network part of the address and all 255s in the host octets; for example, 10.255.255.255 is the network broadcast address for classful network 10.0.0.0.
+
+**network ID** A number that identifies an IPv4 network, using a number in dotted-decimal notation (like IP addresses); a number that represents any single Class A, B, or C IP network.
+
+**network interface card (NIC)** A computer card, sometimes an expansion card and sometimes integrated into the motherboard of the computer, that provides the electronics and other functions to connect to a computer network. Today, most NICs are specifically Ethernet NICs, and most have an RJ-45 port, the most common type of Ethernet port.
+
+**Network LSA** In OSPF, a type of LSA that a designated router (DR) creates for the network (subnet) for which the DR is helping to distribute LSAs.
+
+**network number** A number that uses dotted-decimal notation like IP addresses, but the number itself represents all hosts in a single Class A, B, or C IP network.
+
+**network part** The portion of an IPv4 address that is either 1, 2, or 3 octets/bytes long, based on whether the address is in a Class A, B, or C network.
+
+**network route** A route for a classful network.
+
+**networking model** A generic term referring to any set of protocols and standards collected into a comprehensive grouping that, when followed by the devices in a network, allows all the devices to communicate. Examples include TCP/IP and OSI.
+
+**next-hop router** In an IP route in a routing table, part of a routing table entry that refers to the next IP router (by IP address) that should receive packets that match the route.
+
+**NIC** *See* [network interface card](vol1_gloss.xhtml#gloss_276).
+
+**NVRAM** Nonvolatile RAM. A type of random-access memory (RAM) that retains its contents when a unit is powered off.
+
+### O
+
+**on-link prefix** An IPv6 subnet prefix, advertised by a router in an NDP Router Advertisement (RA) message, that identifies to on-link hosts a subnet considered to exist on the local link.
+
+**Organization-local scope** A concept in IPv6 for which packets sent to an address using this scope should be forwarded by routers inside the organization but not over any links connected to other organizations or over links connected to the Internet.
+
+**OSI** Open System Interconnection reference model. A network architectural model developed by the ISO. The model consists of seven layers, each of which specifies particular network functions, such as addressing, flow control, error control, encapsulation, and reliable message transfer.
+
+**OSPF** Open Shortest Path First. A popular link-state IGP that uses a link-state database and the Shortest Path First (SPF) algorithm to calculate the best routes to reach each known subnet.
+
+**OSPF neighbor** A local router's attitude toward a second router that resides on a common subnet, when both use OSPF and use appropriate OSPF settings so that the routers will choose to exchange routing information with each other.
+
+**OSPF priority** An OSPF interface setting that serves as the first comparison point in the designated router (DR) election process, with the router interface with the highest priority winning the election.
+
+**OSPF router-id** In OSPF, the 32-bit number, normally shown in dotted-decimal notation but also allowed to be listed as an integer, intended as a unique identifier for each OSPF router in an OSPF domain.
+
+**OSPF version 2** The version of the OSPF routing protocol that supports IPv4, and not IPv6, and has been commonly used for over 20 years.
+
+**OSPF version 3** The version of the OSPF routing protocol that originally supported only IPv6, and not IPv4, but now supports IPv4 through the use of address family configuration.
+
+**outgoing interface** In an IP route in a routing table, part of a routing table entry that refers to the local interface out which the local router should forward packets that match the route.
+
+**overlapping subnets** An (incorrect) IP subnet design condition in which one subnet's range of addresses includes addresses in the range of another subnet.
+
+### P
+
+**packet** A logical grouping of bytes that includes the network layer header and encapsulated data, but specifically does not include any headers and trailers below the network layer.
+
+**PAgP** Port Aggregation Protocol (PAgP) is a messaging protocol defined by Cisco that enables two neighboring devices to realize that they have multiple parallel links connecting to each other and then to decide which links can be combined into an EtherChannel.
+
+**parallel detection** The term for the branch of IEEE autonegotiation steps that applies to a device that uses autonegotiation but the device on the other end of the link does not.
+
+**partial mesh** A network topology in which more than two devices could physically communicate but, by choice, only a subset of the pairs of devices connected to the network is allowed to communicate directly.
+
+**passive interface** With a routing protocol, a router interface for which the routing protocol is enabled on the interface, but for which the routing protocol does not send routing protocol messages out that interface.
+
+**patch cable** An Ethernet cable, usually short, that connects from a device's Ethernet port to a wall plate or switch. With wiring inside a building, electricians prewire from the wiring closet to each cubicle or other location, with a patch cable connecting the short distance from the wall plate to the user device.
+
+**periodic update** With routing protocols, the concept that the routing protocol advertises routes in a routing update on a regular periodic basis. This is typical of distance vector routing protocols.
+
+**permanent IPv6 address** When using IPv6 SLAAC, a host creates an address with an infinite preferred and valid lifetime, making the address permanent, using the address when listening for incoming connections to any services running on that host.
+
+**ping** An Internet Control Message Protocol (ICMP) echo message and its reply; ping often is used in IP networks to test the reachability of a network device.
+
+**pinout** The documentation and implementation of which wires inside a cable connect to each pin position in any connector.
+
+**point-to-point network type** An OSPF interface setting, useful on links in a point-to-point topology with only two routers, resulting in flooding directly between the routers without the use of a designated router (DR).
+
+**port** In TCP and UDP, a number that is used to uniquely identify the application process that either sent (source port) or should receive (destination port) data. In LAN switching, another term for *switch interface*.
+
+**PortChannel** One term Cisco switches use to reference a bundle of links that are, in some respects, treated like a single link. Other similar terms include *EtherChannel* and *Channel-group*.
+
+**PortFast** A switch STP feature in which a port is placed in an STP forwarding state as soon as the interface comes up, bypassing the listening and learning states. This feature is meant for ports connected to end-user devices.
+
+**preferred lifetime** In the context of IPv6 addresses, a timer applied to a SLAAC-created address defining how long the address is preferred, meaning the host uses the address for new and existing application flows.
+
+**Prefix (prefix ID)** In both IPv4 and IPv6, this term refers to the number that identifies a group of IPv4 or IPv6 addresses, respectively. Another term for *subnet identifier*.
+
+**prefix discovery** IPv6 neighbor discovery protocol (NDP) function, specifically part of the Router Advertisement (RA) message, in which the router supplies a list of IPv6 subnet prefixes and prefix lengths that exist on the local link.
+
+**prefix length** In IPv6, the number of bits in an IPv6 prefix.
+
+**prefix mask** A term to describe an IPv4 subnet mask when represented as a slash (/) followed by a decimal number. The decimal number is the number of binary 1s in the mask.
+
+**prefix notation (IP version 4)** A shorter way to write a subnet mask in which the number of binary 1s in the mask is simply written in decimal. For example, /24 denotes the subnet mask with 24 binary 1 bits in the subnet mask. The number of bits of value binary 1 in the mask is considered to be the prefix length.
+
+**primary root** This term refers to the switch configured with the primary keyword on the *spanning-tree vlan x root {primary | secondary}* command. At time of configuration, this command causes the switch to choose a new priority setting that makes the switch become the root switch in the network.
+
+**private addresses** IP addresses in several Class A, B, and C networks that are set aside for use inside private organizations. These addresses, as defined in RFC 1918, are not routable through the Internet.
+
+**private IP network** Any of the IPv4 Class A, B, or C networks as defined by RFC 1918, intended for use inside a company but not used as public IP networks.
+
+**Protocol Type field** A field in a LAN header that identifies the type of header that follows the LAN header. Includes the DIX Ethernet Type field, the IEEE 802.2 DSAP field, and the SNAP protocol Type field.
+
+**public IP address** An IP address that is part of a registered network number, as assigned by an Internet Assigned Numbers Authority (IANA) member agency, so that only the organization to which the address is registered is allowed to use the address. Routers in the Internet should have routes allowing them to forward packets to all the publicly registered IP addresses.
+
+**public IP network** Any IPv4 Class A, B, or C network assigned for use by one organization only, so that the addresses in the network are unique across the Internet, allowing packets to be sent through the public Internet using the addresses.
+
+**PVST+** An STP option in Cisco switches that creates an STP instance per VLAN. Cisco proprietary.
+
+### Q–R
+
+**quartet** A term used in this book, but not in other references, to refer to a set of four hex digits in an IPv6 address.
+
+**RADIUS server** An authentication server used with 802.1x to authenticate wireless clients.
+
+**RAM** Random-access memory. A type of volatile memory that can be read and written by a microprocessor.
+
+**Rapid PVST+** An STP option in Cisco switches that creates an RSTP instance per VLAN. Cisco proprietary.
+
+**Rapid Spanning Tree Protocol (RSTP)** Defined in IEEE 802.lw. Defines an improved version of STP that converges much more quickly and consistently than STP (802.Id).
+
+**reference bandwidth** In OSPF, a configurable value for the OSPF routing process, used by OSPF when calculating an interface's default OSPF cost metric, calculated as the interface's bandwidth divided by the reference bandwidth.
+
+**Regional Internet Registry** An organization (five globally) that receives allocations of public IPv4 addresses from IANA and then manages that address space in their major geographic region, performing public address allocations to ISPs and assignments directly to companies that use the addresses.
+
+**repeater** A device that repeats or retransmits signals it receives, effectively expanding the wireless coverage area.
+
+**resident subnet** Each IP subnet contains a number of unicast IP addresses; that subnet is the resident subnet for each of those addresses—that is, the subnet in which those addresses reside.
+
+**reverse route** From one host's perspective, for packets sent back to the host from another host, the route over which the packet travels.
+
+**RFC** Request For Comments. A document used as the primary means for communicating information about the TCP/IP protocols. Some RFCs are designated by the Internet Architecture Board (IAB) as Internet standards, and others are informational. RFCs are available online from numerous sources, including <http://www.rfc-editor.org>.
+
+**RIP** Routing Information Protocol. An interior gateway protocol (IGP) that uses distance vector logic and router hop count as the metric. RIP version 2 (RIPv2) replaced the older RIP version 1 (RIPv1), with RIPv2 providing more features, including support for VLSM.
+
+**RIR** *See* [Regional Internet Registry](vol1_gloss.xhtml#gloss_329).
+
+**RJ-45** A popular type of cabling connector used for Ethernet cabling. It is similar to the RJ-11 connector used for telephone wiring in homes in the United States. RJ-45 allows the connection of eight wires.
+
+**ROAS** *See* [Router-on-a-Stick](vol1_gloss.xhtml#gloss_351).
+
+**rollover cable** For connections to the RJ-45 console port rather than USB console port of a Cisco device, the type of cable used between the user PC and the console port. The UTP rollover cable uses a rollover pinout with eight pins, connecting pin 1 to pin 8, pin 2 to pin 7, and so on.
+
+**ROM** Read-only memory. A type of nonvolatile memory that can be read but not written to by the microprocessor.
+
+**ROMMON** A shorter name for ROM Monitor, which is a low-level operating system that can be loaded into Cisco routers for several seldom-needed maintenance tasks, including password recovery and loading a new IOS when flash memory has been corrupted.
+
+**root bridge** *See* [root switch](vol1_gloss.xhtml#gloss_345).
+
+**root cost** The STP cost from a nonroot switch to reach the root switch, as the sum of all STP costs for all ports out which a frame would exit to reach the root.
+
+**Root Guard** A Cisco switch feature that protects against unexpected new root switches. When enabled on an interface, IOS uses normal STP rules except to disable the use of the port after receiving a superior BPDU.
+
+**root port role** In STP and RSTP, the one port on a nonroot switch in which the least-cost Hello is received. Switches put root ports in a forwarding state.
+
+**root switch** In STP and RSTP, the switch that wins the election by virtue of having the lowest bridge ID and, as a result, sends periodic Hello BPDUs (default, 2 seconds).
+
+**routed port** A reference to the default logic on an interface on a router, such as de-encapsulating the Layer 3 packet from incoming Layer 2 frames and passing the packet to the Layer 3 forwarding logic of the device.
+
+**routed protocol** A protocol that defines packets that can be routed by a router. Examples of routed protocols include IPv4 and IPv6.
+
+**Router Advertisement (RA)** A message defined by the IPv6 Neighbor Discovery Protocol (NDP), used by routers to announce their willingness to act as an IPv6 router on a link. These can be sent in response to a previously received NDP Router Solicitation (RS) message.
+
+**router ID (RID)** In EIGRP and OSPF, a 32-bit number, written in dotted-decimal notation, that uniquely identifies each router.
+
+**router LSA** In OSPF, a type of LSA that a router creates to describe itself and the networks connected to it.
+
+**Router-on-a-Stick (ROAS)** Jargon to refer to the Cisco router feature of using VLAN trunking on an Ethernet interface, which then allows the router to route packets that happen to enter the router on that trunk and then exit the router on that same trunk, just on a different VLAN.
+
+**Router Solicitation (RS)** A message defined by the IPv6 Neighbor Discovery Protocol (NDP), used to ask any routers on the link to reply, identifying the router, plus other configuration settings (prefixes and prefix lengths).
+
+**routing protocol** A set of messages and processes with which routers can exchange information about routes to reach subnets in a particular network. Examples of routing protocols include Enhanced Interior Gateway Routing Protocol (EIGRP), Open Shortest Path First (OSPF), and Routing Information Protocol (RIP).
+
+**routing table** A list of routes in a router, with each route listing the destination subnet and mask, the router interface out which to forward packets destined to that subnet, and as needed, the next-hop router's IP address.
+
+**routing update** A generic reference to any routing protocol's messages in which it sends routing information to a neighbor.
+
+**RSTP** *See* [Rapid Spanning Tree Protocol](vol1_gloss.xhtml#gloss_327).
+
+**running-config file** In Cisco IOS switches and routers, the name of the file that resides in RAM, holding the device's currently used configuration.
+
+### S
+
+**same-layer interaction** The communication between two networking devices for the purposes of the functions defined at a particular layer of a networking model, with that communication happening by using a header defined by that layer of the model. The two devices set values in the header, send the header and encapsulated data, with the receiving devices interpreting the header to decide what action to take.
+
+**secondary root** This term refers to the switch configured with the secondary keyword on the *spanning-tree vlan x root {primary | secondary}* command. At time of configuration, this command causes the switch to set its base priority to 28,762.
+
+**Secure Shell (SSH)** A TCP/IP application layer protocol that supports terminal emulation between a client and server, using dynamic key exchange and encryption to keep the communications private.
+
+**segment** In TCP, a term used to describe a TCP header and its encapsulated data (also called an L4PDU). Also in TCP, the process of accepting a large chunk of data from the application layer and breaking it into smaller pieces that fit into TCP segments. In Ethernet, a segment is either a single Ethernet cable or a single collision domain (no matter how many cables are used).
+
+**shared Ethernet** An Ethernet that uses a hub, or even the original coaxial cabling, that results in the devices having to take turns sending data, sharing the available bandwidth.
+
+**shortest path first (SPF) algorithm** The name of the algorithm used by link-state routing protocols to analyze the LSDB and find the least-cost routes from that router to each subnet.
+
+**single-area OSPF** In OSPFv2 and OSPFv3, a design that uses a single area within one OSPF domain (typically a single company).
+
+**single-mode fiber** A type of fiber cable that works well with transmitters like lasers that emit a single angle of light into the core of the cable, allowing for a smaller core in comparison to multimode fiber cables.
+
+**site-local scope** A concept in IPv6 for which packets sent to an address using this scope should be forwarded by routers, but not forwarded over WAN links to other sites.
+
+**SOHO router** A term to describe the general role of a router that exists as part of the enterprise network but resides at an employee's home or at a smaller business site, possibly with a short-term lease compared to larger enterprise sites. These sites typically have few devices, so it makes sense to use one device that integrates routing, switches, wireless, and other features into a single device (the SOHO router) and are more likely to justify Internet access as the primary WAN access method.
+
+**solicited-node multicast address** A type of IPv6 multicast address, with link-local scope, used to send packets to all hosts in the subnet that share the same value in the last six hex digits of their unicast IPv6 addresses. Begins with FF02::1:FF00:0/104.
+
+**Spanning Tree Protocol (STP)** A protocol defined by IEEE standard 802.ID. Allows switches and bridges to create a redundant LAN, with the protocol dynamically causing some ports to block traffic, so that the bridge/switch forwarding logic will not cause frames to loop indefinitely around the LAN.
+
+**SSH** *See* [Secure Shell](vol1_gloss.xhtml#gloss_360).
+
+**standard access list** A list of IOS global configuration commands that can match only a packet's source IP address, for the purpose of deciding which packets to discard and which to allow through the router.
+
+**star topology** A network topology in which endpoints on a network are connected to a common central device by point-to-point links.
+
+**startup-config file** In Cisco IOS switches and routers, the name of the file that resides in NVRAM memory, holding the device's configuration that will be loaded into RAM as the running-config file when the device is next reloaded or powered on.
+
+**stateful DHCPv6** A term used in IPv6 to contrast with stateless DHCP. Stateful DHCP keeps track of which clients have been assigned which IPv6 addresses (state information).
+
+**stateless address autoconfiguration (SLAAC)** A feature of IPv6 in which a host or router can be assigned an IPv6 unicast address without the need for a stateful DHCP server.
+
+**stateless DHCPv6** A term used in IPv6 to contrast with stateful DHCP. Stateless DHCP servers don't lease IPv6 addresses to clients. Instead, they supply other useful information, such as DNS server IP addresses, but with no need to track information about the clients (state information).
+
+**static access interface** A LAN network design term, synonymous with the term *access interface*, but emphasizing that the port is assigned to one VLAN as a result of static configuration rather than through some dynamic process.
+
+**static route** An IP route on a router created by the user configuring the details of the route on the local router.
+
+**STP** Shielded twisted-pair. This type of cabling has a layer of shielded insulation to reduce electromagnetic interference (EMI).
+
+**straight-through cable** In Ethernet, a cable that connects the wire on pin 1 on one end of the cable to pin 1 on the other end of the cable, pin 2 on one end to pin 2 on the other end, and so on.
+
+**subinterface** One of the virtual interfaces on a single physical interface.
+
+**subnet** Subdivisions of a Class A, B, or C network, as configured by a network administrator. Subnets allow a single Class A, B, or C network to be used instead of multiple networks, and still allow for a large number of groups of IP addresses, as is required for efficient IP routing.
+
+**subnet address** *See* [subnet number](vol1_gloss.xhtml#gloss_389).
+
+**subnet broadcast address** A special address in each IPv4 subnet, specifically the largest numeric address in the subnet, designed so that packets sent to this address should be delivered to all hosts in that subnet.
+
+**subnet ID (IPv4)** *See* [subnet number](vol1_gloss.xhtml#gloss_389).
+
+**subnet ID (IPv6)** The number that represents the IPv6 subnet. Also known as the IPv6 prefix, or more formally as the subnet-router anycast address.
+
+**subnet ID (prefix ID)** *See* [subnet number](vol1_gloss.xhtml#gloss_389).
+
+**subnet mask** A 32-bit number that numerically describes the format of an IP address, by representing the combined network and subnet bits in the address with mask bit values of 1, and representing the host bits in the address with mask bit values of 0.
+
+**subnet number** In IPv4, a dotted-decimal number that represents all addresses in a single subnet. Numerically, the smallest value in the range of numbers in a subnet, reserved so that it cannot be used as a unicast IP address by a host.
+
+**subnet part** In a subnetted IPv4 address, interpreted with classful addressing rules, one of three parts of the structure of an IP address, with the subnet part uniquely identifying different subnets of a classful IP network.
+
+**subnet prefix** The term for a number that represents an IPv6 subnet.
+
+**subnet router anycast address** A special anycast address in each IPv6 subnet, reserved for use by routers as a way to send a packet to any router on the subnet. The address's value in each subnet is the same number as the subnet ID.
+
+**subnet zero** An alternative term for *zero subnet*. *See* [zero subnet](vol1_gloss.xhtml#gloss_393).
+
+**subnetting** The process of subdividing a Class A, B, or C network into smaller groups called subnets.
+
+**summary LSA** In OSPFv2, a type of LSA, created by an Area Border Router (ABR), to describe a subnet in one area in the database of another area.
+
+**superior BPDU** An STP bridge protocol data unit (BPDU) that lists a better (lower) root bridge ID (BID) as compared to the current bridge. A switch that receives a superior BPDU under normal conditions would begin using the new switch with the lower BID as the root switch.
+
+**switch** A network device that filters, forwards, and floods Ethernet frames based on the destination address of each frame.
+
+**switched Ethernet** An Ethernet that uses a switch, and particularly not a hub, so that the devices connected to one switch port do not have to contend to use the bandwidth available on another port. This term contrasts with *shared Ethernet*, in which the devices must share bandwidth, whereas switched Ethernet provides much more capacity, as the devices do not have to share the available bandwidth.
+
+**switched port** A reference to the default logic on a Layer 2 switch port, such as learning the source MAC address of received frames and passing incoming frames to the Layer 2 forwarding logic of the device.
+
+**switched virtual interface (SVI)** Another term for any VLAN interface in a Cisco switch. *See also* [VLAN interface](vol1_gloss.xhtml#gloss_434).
+
+**system ID extension** The term for the formatting applied to the original 16-bit STP priority field to break it into a 4-bit priority field and a 12-bit VLAN ID field.
+
+### T
+
+**TCP** Transmission Control Protocol. A connection-oriented transport layer TCP/IP protocol that provides reliable data transmission.
+
+**TCP/IP** Transmission Control Protocol/Internet Protocol. A common name for the suite of protocols developed by the U.S. Department of Defense in the 1970s to support the construction of worldwide internetworks. TCP and IP are the two best-known protocols in the suite.
+
+**telco** A common abbreviation for *telephone company*.
+
+**Telnet** The standard terminal-emulation application layer protocol in the TCP/IP protocol stack. Telnet is used for remote terminal connection, enabling users to log in to remote systems and use resources as if they were connected to a local system. Telnet is defined in RFC 854.
+
+**temporary IPv6 address** When using IPv6 SLAAC, a host creates an address with a relatively short preferred and valid lifetime, usually days long for each, making the address temporary. The host uses the temporary address for outgoing application connections.
+
+**topology database** The structured data that describes the network topology to a routing protocol. Link-state and balanced hybrid routing protocols use topology tables, from which they build the entries in the routing table.
+
+**trace** Short for traceroute. A program available on many systems that traces the path that a packet takes to a destination. It is used mostly to troubleshoot routing problems between hosts.
+
+**traceroute** A program available on many systems that traces the path that a packet takes to a destination. It is used mostly to debug routing problems between hosts.
+
+**trailer** In computer networking, a set of bytes placed behind some other data, encapsulating that data, as defined by a particular protocol. Typically, only data-link layer protocols define trailers.
+
+**transceiver** A term formed from the words *transmitter* and *receiver*. The hardware used to both send (transmit) energy over some communications medium (e.g., wires in a cable), as well as to process received energy signals to interpret as a series of 1s and 0s.
+
+**trunk** In campus LANs, an Ethernet segment over which the devices add a VLAN header that identifies the VLAN in which the frame exists.
+
+**trunk interface** A switch interface configured so that it operates using VLAN trunking (either 802.1Q or ISL).
+
+**trunking** Also called *VLAN trunking*. A method (using either the Cisco ISL protocol or the IEEE 802.1Q protocol) to support multiple VLANs, allowing traffic from those VLANs to cross a single link.
+
+**trunking administrative mode** The configured trunking setting on a Cisco switch interface, as configured with the switchport mode command.
+
+**trunking operational mode** The current behavior of a Cisco switch interface for VLAN trunking.
+
+**twisted-pair** Transmission medium consisting of two insulated wires, with the wires twisted around each other in a spiral. An electrical circuit flows over the wire pair, with the current in opposite directions on each wire, which significantly reduces the interference between the two wires.
+
+### U
+
+**UDP** User Datagram Protocol. Connectionless transport layer protocol in the TCP/IP protocol stack. UDP is a simple protocol that exchanges datagrams without acknowledgments or guaranteed delivery.
+
+**ULA global ID** The unique local address (ULA) for one organization uses a /48 prefix, composed of a set hex FD in the first 8 bits, with a 10-hex digit (40 bit) global ID, which should be generated by a pseudo-random algorithm.
+
+**unicast address** Generally, any address in networking that represents a single device or interface, instead of a group of addresses (as would be represented by a multicast or broadcast address).
+
+**unicast IP address** An IP address that represents a single interface. In IPv4, these addresses come from the Class A, B, and C ranges.
+
+**unidirectional link** A condition on fiber optic links in which one of the two required fibers fails in a way that also results in both attached switches leaving their interfaces in a working (connected) state—when, in reality, the link can pass frames only in a single direction.
+
+**unique local address** A type of IPv6 unicast address meant as a replacement for IPv4 private addresses.
+
+**unknown unicast frame** An Ethernet frame whose destination MAC address is not listed in a switch's MAC address table, so the switch must flood the frame.
+
+**up and up** Jargon referring to the two interface states on a Cisco IOS router or switch (line status and protocol status), with the first "up" referring to the line status and the second "up" referring to the protocol status. An interface in this state should be able to pass data-link frames.
+
+**update timer** The time interval that regulates how often a routing protocol sends its next periodic routing updates. Distance vector routing protocols send full routing updates every update interval.
+
+**user mode** A mode of the user interface to a router or switch in which the user can type only nondisruptive EXEC commands, generally just to look at the current status, but not to change any operational settings.
+
+**UTP** Unshielded twisted-pair. A type of cabling, standardized by the Telecommunications Industry Association (TIA), that holds twisted pairs of copper wires (typically four pair) and does not contain any shielding from outside interference.
+
+### V
+
+**valid lifetime** In the context of IPv6 addresses, a timer applied to a SLAAC-created address defining how long the address is valid, meaning the host can continue to support existing application flows using the address.
+
+**variable-length subnet mask (VLSM)** The capability to specify a different subnet mask for the same Class A, B, or C network number on different subnets. VLSM can help optimize available address space.
+
+**virtual LAN (VLAN)** A group of devices, connected to one or more switches, with the devices grouped into a single broadcast domain through switch configuration. VLANs allow switch administrators to separate the devices connected to the switches into separate VLANs without requiring separate physical switches, gaining design advantages of separating the traffic without the expense of buying additional hardware.
+
+**virtual private network (VPN)** The process of securing communication between two devices whose packets pass over some public and unsecured network, typically the Internet. VPNs encrypt packets so that the communication is private, and authenticate the identity of the endpoints.
+
+**VLAN** *See* [virtual LAN](vol1_gloss.xhtml#gloss_431).
+
+**VLAN interface** A configuration concept inside Cisco switches, used as an interface between IOS running on the switch and a VLAN supported inside the switch, so that the switch can assign an IP address and send IP packets into that VLAN.
+
+**VLAN Trunking Protocol (VTP)** A Cisco-proprietary messaging protocol used between Cisco switches to communicate configuration information about the existence of VLANs, including the VLAN ID and VLAN name.
+
+**voice VLAN** A VLAN defined for use by IP Phones, with the Cisco switch notifying the phone about the voice VLAN ID so that the phone can use 802.1Q frames to support traffic for the phone and the attached PC (which uses a data VLAN).
+
+**VoIP** Voice over IP. The transport of voice traffic inside IP packets over an IP network.
+
+**VTP** *See* [VLAN Trunking Protocol](vol1_gloss.xhtml#gloss_435).
+
+**VTP transparent mode** One of three VTP operational modes. Switches in transparent mode can configure VLANs, but they do not tell other switches about the changes, and they do not learn about VLAN changes from other switches.
+
+### W
+
+**WAN** *See* [wide-area network](vol1_gloss.xhtml#gloss_442).
+
+**web server** Software, running on a computer, that stores web pages and sends those web pages to web clients (web browsers) that request the web pages.
+
+**wide-area network (WAN)** A part of a larger network that implements mostly OSI Layer 1 and 2 technology, connects sites that typically sit far apart, and uses a business model in which a consumer (individual or business) must lease the WAN from a service provider (often a telco).
+
+**Wi-Fi Alliance** An organization formed by many companies in the wireless industry (an industry association) for the purpose of getting multivendor certified-compatible wireless products to market in a more timely fashion than would be possible by simply relying on standardization processes.
+
+**wildcard mask** The mask used in Cisco IOS ACL commands and OSPF and EIGRP network commands.
+
+**wired LAN** A local-area network (LAN) that physically transmits bits using cables, often the wires inside cables. A term for local-area networks that use cables, emphasizing the fact that the LAN transmits data using wires (in cables) instead of wireless radio waves. *See also* [wireless LAN](vol1_gloss.xhtml#gloss_446).
+
+**wireless LAN** A local-area network (LAN) that physically transmits bits using radio waves. The name "wireless" compares these LANs to more traditional "wired" LANs, which are LANs that use cables (which often have copper wires inside).
+
+### Z
+
+**zero subnet** For every classful IPv4 network that is subnetted, the one subnet whose subnet number has all binary 0s in the subnet part of the number. In decimal, the zero subnet can be easily identified because it is the same number as the classful network number.
