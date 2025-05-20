@@ -107,10 +107,17 @@ class EPUBToMarkdown:
                 "lxml parser not found. Falling back to built-in html.parser."
             )
             soup = BeautifulSoup(content, "html.parser")
-        # Extract title
         title_tag = soup.find(re.compile(r"^h[1-6]$")) or soup.find("title")
         title = title_tag.get_text().strip() if title_tag else Path(chapter_path).stem
         body = soup.find("body") or soup
+        for a in body.find_all("a", href=True):
+            href = a["href"]
+            if ".xhtml#" in href or ".html#" in href:
+                base, anchor = href.split("#", 1)
+                md_href = Path(base).with_suffix(".md").as_posix()
+                a["href"] = f"{md_href}#{anchor}"
+            elif href.endswith(".xhtml") or href.endswith(".html"):
+                a["href"] = Path(href).with_suffix(".md").as_posix()
         # Convert to markdown
         html = str(body)
         markdown = md(
@@ -133,6 +140,10 @@ class EPUBToMarkdown:
 
         content_md = "\n".join(lines)
         content_md = img_pattern.sub(repl, content_md)
+        # Normalize smart quotes and dashes
+        replacements = {"“": '"', "”": '"', "‘": "'", "’": "'", "–": "-", "—": "--"}
+        for bad, good in replacements.items():
+            content_md = content_md.replace(bad, good)
         return f"# {title}\n\n" + content_md
 
     def save_all(self):
